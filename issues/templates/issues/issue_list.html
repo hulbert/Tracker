@@ -1,0 +1,24 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+{% if issue_list %}
+<table>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for issue in issue_list %}
+		<tr>
+			<td><a href="">{{ issue.title }}</td>
+			<td>{{ issue.status.name }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endif %}
+
+{% endblock %}
