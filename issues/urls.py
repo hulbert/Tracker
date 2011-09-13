@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 # Uncomment the next two lines to enable the admin:
 urlpatterns = patterns('issues.views',
     url(r'^$', 'index'),
+    url(r'^new/$', 'new_issue'),
     url(r'^list/$', login_required(
         ListView.as_view(
             queryset = Issue.objects.all(),

@@ -4,8 +4,15 @@
 	<head>
 		<title>{{ page_title }}</title>
 		{% block page_meta %}{% endblock %}
+		<link rel="stylesheet" href="/assets/css/main.css">
+		
+		
 		{% block page_css %}{% endblock %}
 		{% block page_js %}{% endblock %}
+		
+		<!--[if lt IE 9]>
+		<script src="/assets/css/html5shiv.js"></script>
+		<![endif]-->
 	</head>
 	
 	<body>

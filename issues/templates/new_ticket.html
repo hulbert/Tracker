@@ -1,0 +1,19 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+<form action="" method="post">
+	<ul>
+		<li class="required">
+			<label for="project_id">Project</label>
+			<select id="project_id">
+				<option value=""></option>
+				{% for project in projects %}
+				<option value"{{ project.id }}">{{ project.name }}</option>
+				{% endfor %}
+			</select>
+		<li></li>
+		<li></li>
+
+
+{% endblock %}
